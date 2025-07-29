@@ -485,14 +485,14 @@ class WebScraper {
         }
     }
 
-    // LatinAmericaCupid specific workflow following instructions.md
-    async runLatinAmericaCupidWorkflow() {
+    // ThaiCupid specific workflow following instructions.md
+    async runThaiCupidWorkflow() {
         try {
-            console.log('Starting LatinAmericaCupid workflow...');
+            console.log('Starting ThaiCupid workflow...');
             
             // Step 1: Navigate to login page
             console.log('Step 1: Navigating to login page...');
-            await this.navigateTo('https://www.japancupid.com/es/auth/login');
+            await this.navigateTo('https://www.thaicupid.com/es/auth/login');
             
             // Step 2: Wait for page load and perform login
             console.log('Step 2: Waiting for page load and performing login...');
@@ -765,7 +765,7 @@ class WebScraper {
             
             
         } catch (error) {
-            console.error('Error in LatinAmericaCupid workflow:', error);
+            console.error('Error in ThaiCupid workflow:', error);
             throw error;
         }
     }
@@ -792,20 +792,20 @@ async function example() {
     }
 }
 
-// LatinAmericaCupid workflow function following instructions.md
-async function runLatinAmericaCupidFlow() {
+// ThaiCupid workflow function following instructions.md
+async function runThaiCupidFlow() {
     const scraper = new WebScraper();
     
     try {
         console.log('Initializing browser with Spanish locale...');
         await scraper.init();
         
-        await scraper.runLatinAmericaCupidWorkflow();
+        await scraper.runThaiCupidWorkflow();
         
         await scraper.close();
         
     } catch (error) {
-        console.error('Error in BrazilCupid workflow:', error);
+        console.error('Error in ThaiCupid workflow:', error);
         await scraper.close();
     }
 }
@@ -813,6 +813,6 @@ async function runLatinAmericaCupidFlow() {
 module.exports = WebScraper;
 
 if (require.main === module) {
-    // Run LatinAmericaCupid workflow by default
-    runLatinAmericaCupidFlow();
+    // Run ThaiCupid workflow by default
+    runThaiCupidFlow();
 }
