@@ -485,14 +485,14 @@ class WebScraper {
         }
     }
 
-    // ThaiCupid specific workflow following instructions.md
-    async runThaiCupidWorkflow() {
+    // AfroIntroductions specific workflow following instructions.md
+    async runAfroIntroductionsWorkflow() {
         try {
-            console.log('Starting ThaiCupid workflow...');
+            console.log('Starting AfroIntroductions workflow...');
             
             // Step 1: Navigate to login page
             console.log('Step 1: Navigating to login page...');
-            await this.navigateTo('https://www.thaicupid.com/es/auth/login');
+            await this.navigateTo('https://www.afrointroductions.com/es/auth/login');
             
             // Step 2: Wait for page load and perform login
             console.log('Step 2: Waiting for page load and performing login...');
@@ -765,7 +765,7 @@ class WebScraper {
             
             
         } catch (error) {
-            console.error('Error in ThaiCupid workflow:', error);
+            console.error('Error in AfroIntroductions workflow:', error);
             throw error;
         }
     }
@@ -792,20 +792,20 @@ async function example() {
     }
 }
 
-// ThaiCupid workflow function following instructions.md
-async function runThaiCupidFlow() {
+// AfroIntroductions workflow function following instructions.md
+async function runAfroIntroductionsFlow() {
     const scraper = new WebScraper();
     
     try {
         console.log('Initializing browser with Spanish locale...');
         await scraper.init();
         
-        await scraper.runThaiCupidWorkflow();
+        await scraper.runAfroIntroductionsWorkflow();
         
         await scraper.close();
         
     } catch (error) {
-        console.error('Error in ThaiCupid workflow:', error);
+        console.error('Error in AfroIntroductions workflow:', error);
         await scraper.close();
     }
 }
@@ -813,6 +813,6 @@ async function runThaiCupidFlow() {
 module.exports = WebScraper;
 
 if (require.main === module) {
-    // Run ThaiCupid workflow by default
-    runThaiCupidFlow();
+    // Run AfroIntroductions workflow by default
+    runAfroIntroductionsFlow();
 }
